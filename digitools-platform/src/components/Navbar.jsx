@@ -1,6 +1,6 @@
 import cartIcon from "../assets/products/shopping-cart.png";
 
-const Navbar = () => {
+const Navbar = ({ cartCount }) => {
   return (
     <div className="border-b">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
@@ -12,31 +12,30 @@ const Navbar = () => {
 
         {/* Menu */}
         <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
-          <li className="cursor-pointer hover:text-purple-600 transition">
-            Products
-          </li>
-          <li className="cursor-pointer hover:text-purple-600 transition">
-            Features
-          </li>
-          <li className="cursor-pointer hover:text-purple-600 transition">
-            Pricing
-          </li>
-          <li className="cursor-pointer hover:text-purple-600 transition">
-            Testimonials
-          </li>
-          <li className="cursor-pointer hover:text-purple-600 transition">
-            FAQ
-          </li>
+          <li className="cursor-pointer hover:text-purple-600 transition">Products</li>
+          <li className="cursor-pointer hover:text-purple-600 transition">Features</li>
+          <li className="cursor-pointer hover:text-purple-600 transition">Pricing</li>
+          <li className="cursor-pointer hover:text-purple-600 transition">Testimonials</li>
+          <li className="cursor-pointer hover:text-purple-600 transition">FAQ</li>
         </ul>
 
         {/* Right Side */}
         <div className="flex items-center gap-5">
 
-          {/* Cart */}
-          <img 
-            src={cartIcon} 
-            className="w-5 h-5 cursor-pointer hover:scale-110 transition" 
-          />
+          {/* Cart with count */}
+          <div className="relative cursor-pointer">
+            <img 
+              src={cartIcon} 
+              className="w-5 h-5 hover:scale-110 transition"
+            />
+
+            {/* COUNT BADGE */}
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 rounded-full">
+                {cartCount}
+              </span>
+            )}
+          </div>
 
           {/* Login */}
           <button className="text-gray-700 hover:text-purple-600 transition">
