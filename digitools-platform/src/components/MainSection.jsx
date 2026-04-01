@@ -48,7 +48,7 @@ const MainSection = ({ setCartCount }) => {
       </h2>
 
       <p className="text-gray-500 text-center mb-8">
-        Choose from our curated collection of premium digital products
+        Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
       </p>
 
       {/* TOGGLE (FIXED DESIGN) */}

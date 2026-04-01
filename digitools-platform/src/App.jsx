@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import Stats from "./components/Stats";
 import MainSection from "./components/MainSection";
+import Steps from "./components/Steps";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
       <Stats />
 
       <MainSection setCartCount={setCartCount} />
+      <Steps />
     </>
   );
 }
