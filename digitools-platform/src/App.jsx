@@ -6,6 +6,7 @@ import MainSection from "./components/MainSection";
 import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
 import ReadyToTransform from "./components/ReadyToTransform";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       <Steps />
       <Pricing />
       <ReadyToTransform />
-
+      <Footer />
 
     </>
   );
