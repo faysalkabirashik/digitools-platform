@@ -5,7 +5,7 @@ import Stats from "./components/Stats";
 import MainSection from "./components/MainSection";
 import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
-import CTA from "./components/CTA";
+import ReadyToTransform from "./components/ReadyToTransform";
 
 
 function App() {
@@ -21,7 +21,8 @@ function App() {
       <MainSection setCartCount={setCartCount} />
       <Steps />
       <Pricing />
-      <CTA />
+      <ReadyToTransform />
+
 
     </>
   );
