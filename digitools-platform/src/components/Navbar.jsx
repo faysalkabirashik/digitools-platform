@@ -2,7 +2,8 @@ import cartIcon from "../assets/products/shopping-cart.png";
 
 const Navbar = ({ cartCount }) => {
   return (
-    <div className="border-b">
+    <div className="fixed top-0 left-0 w-full bg-white z-50 border-b shadow-sm">
+
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
         {/* Logo */}
@@ -22,16 +23,16 @@ const Navbar = ({ cartCount }) => {
         {/* Right Side */}
         <div className="flex items-center gap-5">
 
-          {/* Cart with count */}
+          {/* Cart */}
           <div className="relative cursor-pointer">
             <img 
               src={cartIcon} 
               className="w-5 h-5 hover:scale-110 transition"
             />
 
-            {/* COUNT BADGE */}
+            {/* Badge */}
             {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 rounded-full">
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 py-[1px] rounded-full">
                 {cartCount}
               </span>
             )}
@@ -42,7 +43,7 @@ const Navbar = ({ cartCount }) => {
             Login
           </button>
 
-          {/* Button */}
+          {/* CTA */}
           <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-5 py-2 rounded-full hover:scale-105 transition duration-300">
             Get Started
           </button>
